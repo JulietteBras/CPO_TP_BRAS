@@ -9,5 +9,20 @@ package tp2_relation_1_bras;
  * @author juliettebras
  */
 public class Voiture {
+  
+    String Modele;
+    String Marque;
+    int PuissanceCV;
+    
+    public Voiture (String Modele1, String Marque1, int PuissanceCV1){
+        Modele=Modele1;
+        Marque=Marque1;
+        PuissanceCV=PuissanceCV1;
+   
+     }   
+        @Override
+public String toString () {
+return ("Modèle: "+Modele +"Marque: "+Marque +"Puissance CV: "+PuissanceCV);
+}   
     
 }
