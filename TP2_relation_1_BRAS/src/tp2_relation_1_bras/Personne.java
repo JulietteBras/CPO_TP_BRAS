@@ -11,15 +11,19 @@ package tp2_relation_1_bras;
 public class Personne {
     String nom;
     String prenom;
+    int nbVoiture;
+    Voiture[] liste_voitures;
     
     public Personne (String nom1, String prenom1) {
     prenom=prenom1;
     nom=nom1;
+    liste_voitures = new Voiture [3];
+    nbVoiture=0;
     
 
 } 
  @Override
 public String toString () {
-return ("Nom: "+nom +"Prenom: "+prenom);   
+return (" Nom: "+nom +" Prenom: "+prenom);   
 }
     }
