@@ -44,6 +44,10 @@ reno.nbVoiture ++;
 uneAutreClio.Proprietaire = reno;
 
 System.out.println(bob.toString() + reno.toString());
+
+Voiture voiture1 = new Voiture("206", "peugeot", 6);
+reno.ajouter_voiture(voiture1);
+System.out.println(reno.toString() + voiture1.toString());
     }
     
 }

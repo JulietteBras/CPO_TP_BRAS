@@ -26,4 +26,17 @@ public class Personne {
 public String toString () {
 return (" Nom: "+nom +" Prenom: "+prenom);   
 }
-    }
+ public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
+ if (nbVoiture < 3 & voiture_a_ajouter.Proprietaire  == null){
+     for(int k = 0; k < 3; k ++){ 
+         if(liste_voitures[k] == null){
+                    liste_voitures[k] = voiture_a_ajouter;
+                    nbVoiture ++;
+                    voiture_a_ajouter.Proprietaire = this;
+                    return true;
+        }
+    } 
+ } 
+ return false;
+ } 
+ }
