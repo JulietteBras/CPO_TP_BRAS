@@ -16,7 +16,7 @@ public class TP2_manip_BRAS {
     public static void main(String[] args) {
         // TODO code application logic here
     
-Tartiflette assiette1 = new Tartiflette(500) ;
+Tartiflette assiette1 = new Tartiflette(500) ; //Création de deux Tartiflettes avec des calories différentes
 Tartiflette assiette2 = new Tartiflette(600) ;
 Tartiflette assiette3 = assiette2 ;
 //Il y a 2 tartiflettes crées, et assiette 2 et 3 référencent la même tartiflette
@@ -24,12 +24,13 @@ Tartiflette assiette3 = assiette2 ;
 System.out.println("nb de calories de Assiette 2 : " + assiette2.nbCalories);
 System.out.println("nb de calories de Assiette 3 : " + assiette3.nbCalories);
 
-assiette2.nbCalories+=5;
+assiette2.nbCalories+=5; //on incrémente les calories d'une tartiflette
 
 System.out.println("nb de calories de Assiette 2 : " + assiette2.nbCalories);
 System.out.println("nb de calories de Assiette 3 : " + assiette3.nbCalories);
 
-int temp;
+// assiette1 et assiette2 intervertissent les objets de type Tartiflette qu’elles référencent. 
+int temp; //Création d'une variable temp
 temp=assiette1.nbCalories;
 assiette1.nbCalories=assiette2.nbCalories;
 assiette2.nbCalories=temp;

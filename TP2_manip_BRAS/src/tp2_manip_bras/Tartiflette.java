@@ -10,7 +10,7 @@ package tp2_manip_bras;
  */
 public class Tartiflette {
     int nbCalories;
-    public Tartiflette(int Kcal){
+    public Tartiflette(int Kcal){ //Constructeur qui initialise nbCalories
        nbCalories=Kcal;
         
     }
