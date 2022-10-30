@@ -16,7 +16,7 @@ public class Voiture {
     Personne Proprietaire;
     
     
-    public Voiture (String Modele1, String Marque1, int PuissanceCV1){
+    public Voiture (String Modele1, String Marque1, int PuissanceCV1){ //constructeur de la classe Voiture
         Modele=Modele1;
         Marque=Marque1;
         PuissanceCV=PuissanceCV1;
@@ -24,7 +24,7 @@ public class Voiture {
    
      }   
         @Override
-public String toString () {
+public String toString () { //Méthode toString()
 return ("Modèle: "+Modele +" Marque: "+Marque +" Puissance CV: "+PuissanceCV);
 }   
     

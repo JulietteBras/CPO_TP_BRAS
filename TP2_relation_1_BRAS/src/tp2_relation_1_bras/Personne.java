@@ -14,7 +14,7 @@ public class Personne {
     int nbVoiture;
     Voiture[] liste_voitures;
     
-    public Personne (String nom1, String prenom1) {
+    public Personne (String nom1, String prenom1) { //constructeur de la classe Personne
     prenom=prenom1;
     nom=nom1;
     liste_voitures = new Voiture [3];
@@ -26,17 +26,17 @@ public class Personne {
 public String toString () {
 return (" Nom: "+nom +" Prenom: "+prenom);   
 }
- public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
- if (nbVoiture < 3 & voiture_a_ajouter.Proprietaire  == null){
+ public boolean ajouter_voiture( Voiture voiture_a_ajouter) { //méthode ajouter une voiture
+ if (nbVoiture < 3 & voiture_a_ajouter.Proprietaire  == null){ //On vérifie que le propriétaire a moins de 3 voitures et que la voiture n'a pas déjà un propriétaire
      for(int k = 0; k < 3; k ++){ 
-         if(liste_voitures[k] == null){
+         if(liste_voitures[k] == null){ //On vérifie que l'ajout est possible
                     liste_voitures[k] = voiture_a_ajouter;
                     nbVoiture ++;
                     voiture_a_ajouter.Proprietaire = this;
-                    return true;
+                    return true; //On renvoie true si on arrive à ajouter une voiture
         }
     } 
  } 
- return false;
+ return false; //Si la voiture à ajouter possède déjà un propriétaire ou si le propriétaire a déjà 3 voitures on renvoie false
  } 
  }
