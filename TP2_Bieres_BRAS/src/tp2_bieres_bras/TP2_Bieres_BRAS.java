@@ -17,10 +17,10 @@ public class TP2_Bieres_BRAS {
         // TODO code application logic here
   
 BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls",
-7.0 ,"Dubuisson");
+7.0 ,"Dubuisson"); //Création objet BouteilleBiere avec constructeur
 System.out.println(uneBiere);
 
- //BouteilleBiere uneBiere = new BouteilleBiere();
+ //BouteilleBiere uneBiere = new BouteilleBiere(); //Création objet BouteilleBiere
  
  //uneBiere.nom = "Cuvée des trolls"; 
  //uneBiere.degreAlcool = 7.0 ;
@@ -36,9 +36,10 @@ BouteilleBiere secondeBiere= new BouteilleBiere("Leffe", 6.6, "Abbaye de Leffe")
  //secondeBiere.brasserie="Abbaye de Leffe";
  //uneBiere.lireEtiquette();
 BouteilleBiere troisiemeBiere= new BouteilleBiere("Heineken", 5.6,"Abbaye de Heineken");
+
 BouteilleBiere quatriemeBiere= new BouteilleBiere("Corona",7.3,"Abbaye du Corona");
   
-uneBiere.Decapsuler();
+uneBiere.Decapsuler(); //Création objet une bière
 System.out.println(uneBiere);
 
         

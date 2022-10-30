@@ -15,17 +15,17 @@ public class BouteilleBiere {
  boolean ouverte;
  
  @Override
-public String toString() {
+public String toString() { //Afficher l'état de la bière
 String chaine_a_retourner;
 chaine_a_retourner = nom + " (" + degreAlcool + " degrés) Ouverte ? ";
 if (ouverte == true ) chaine_a_retourner += "oui" ; else chaine_a_retourner += "non" ;
 return chaine_a_retourner ;
 }
  
- public void lireEtiquette() {
+ public void lireEtiquette() { //Méthode lire étiquette (donne les caractéristiques de la bière)
 System.out.println("Bouteille de " + nom +" (" + degreAlcool + " degres) \nBrasserie : " + brasserie ) ;
 }
-public void Decapsuler() {
+public void Decapsuler() { //Méthode décapsuler
     if (ouverte==false){
         ouverte=true;
        } else {
@@ -37,7 +37,7 @@ public void Decapsuler() {
     
 } 
 public BouteilleBiere(String unNom, double unDegre, String
-uneBrasserie) {
+uneBrasserie) { //Constructeur BouteilleBiere
    nom = unNom;
    degreAlcool = unDegre;
    brasserie = uneBrasserie;
