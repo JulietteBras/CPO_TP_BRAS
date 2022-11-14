@@ -17,7 +17,11 @@ public Baton (String Nom, int Nombre,int Age){
          age=Age;
      }else{
          age=0;
+      if (Age>=100){
+          age=100;
+      }
      }
+     this.age=Age;
  }
 
     public int getAge() {
