@@ -17,6 +17,7 @@ public class Personnage {
     private int NiveauDeVie;
     ArrayList<Arme> inventaire = new ArrayList<Arme>();
     Arme ArmeEnMain=null;
+    public static int nbPersonnage=0;
 
 public void gestion (Arme arme){// Méthode pour ajouter des armes si le personnages a moins de 5 armes
     if (inventaire.size()<5){
@@ -54,6 +55,7 @@ public void equiper (Arme arme){
         
         this.nom = nom;
         this.NiveauDeVie = NiveauDeVie;
+        nbPersonnage ++;
     }
 
     public int getNiveauDeVie() {

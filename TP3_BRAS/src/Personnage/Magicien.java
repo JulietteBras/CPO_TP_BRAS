@@ -14,10 +14,12 @@ import Armes.Baton;
  */
 public class Magicien extends Personnage {
     private boolean confirme;
+    public static int nbMagicien=0;
 
     public Magicien(boolean confirme, String nom, int NiveauDeVie) {
         super(nom, NiveauDeVie);
         this.confirme = confirme;
+        nbMagicien++;
     }
 
     public void setConfirme(boolean confirme) {
