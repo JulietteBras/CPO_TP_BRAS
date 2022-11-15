@@ -4,7 +4,11 @@
  */
 package tp3_bras;
 
+import Armes.Arme;
+import Armes.Epee;
+import Armes.Baton;
 import java.util.ArrayList;
+import Armes.*;
 
 /**
  *
@@ -24,8 +28,18 @@ public class TP3_BRAS {
      Baton Cha = new Baton("Charme",5,6);
      
      
-     ArrayList<Arme> Tab= new ArrayList<Arme>();
-             
+     ArrayList<Arme> Tab= new ArrayList<Arme>(); // Création tableau Dynamique avec Epee et Baton
+     Tab.add(Exc);
+     Tab.add(Dur);
+     Tab.add(Ch);
+     Tab.add(Cha);
+     
+     int taille = Tab.size(); // On prend dans le tableau les valeurs 
+     for(int i=0 ; i<=taille; i++){
+         System.out.println("Votre arme est : "+ Tab.get(i));
+     }
+     
+     
     }
     
 }
