@@ -1,5 +1,8 @@
 package Personnage;
 
+import Armes.Arme;
+import java.util.ArrayList;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -12,7 +15,32 @@ package Personnage;
 public class Personnage {
     private String nom;
     private int NiveauDeVie;
+    ArrayList<Arme> inventaire = new ArrayList<Arme>();
+    Arme ArmeEnMain=null;
 
+public void gestion (Arme arme){// Méthode pour ajouter des armes si le personnages a moins de 5 armes
+    if (inventaire.size()<5){
+        inventaire.add(arme);
+    }
+}   
+
+public void equiper (Arme arme){
+    boolean result =inventaire.contains(arme);
+    if (result ==true){
+        System.out.println("Votre arme est : "+ arme);
+        ArmeEnMain=arme;
+    }else{
+        System.out.println("Cette arme n'existe pas");
+        ArmeEnMain=null;
+    }
+}
+
+    public Arme getArmeEnMain() {
+        return ArmeEnMain;
+    }
+
+
+    
     public Personnage(String nom, int NiveauDeVie) {
         if (NiveauDeVie<0){
             NiveauDeVie=1;    
@@ -46,7 +74,7 @@ public class Personnage {
 
     @Override
     public String toString() {
-        return "Personnage{" + "nom=" + nom + ", NiveauDeVie=" + NiveauDeVie + '}';
+        return "Personnage{" + "nom=" + nom + ", NiveauDeVie=" + NiveauDeVie + "Arme en main=" + ArmeEnMain+'}';
     }
    
     
