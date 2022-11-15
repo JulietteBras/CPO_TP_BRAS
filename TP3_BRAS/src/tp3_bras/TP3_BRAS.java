@@ -60,6 +60,37 @@ public class TP3_BRAS {
      for(int i=0 ; i<taille2; i++){
          System.out.println("Votre personnage est : "+ Tab2.get(i));
      }
+     
+     //Test personnages avec armes
+     
+     Epee Coq = new Epee(4,"coquillage",8)  ;
+     Epee Or = new Epee(6,"Or",8);
+     Epee Arg = new Epee(1,"Argent",3);
+     Baton B1 = new Baton("B1",5,3);
+     Baton B2 = new Baton("B2",4,6);
+     Baton B3 = new Baton("B3",5,2);
+     
+     Guerrier Lian  =new Guerrier(true,"Lian",44);
+     Magicien Gris = new Magicien(true,"Gris",67);
+     
+     //Ajout des armes crées pour le test
+     Lian.gestion(Coq);
+     Lian.gestion(Or);
+     Lian.gestion(B1);
+     
+     Lian.equiper(Coq);
+     Lian.getArmeEnMain();
+     
+     Gris.gestion(B2);
+     Gris.gestion(B3);
+     Gris.gestion(Arg);
+     
+     Gris.NBArmepref();
+     System.out.println(Lian.toString());
+     System.out.println(Gris.toString());
+     
+     
+     
     }
     
 }

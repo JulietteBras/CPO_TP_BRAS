@@ -1,5 +1,8 @@
 package Personnage;
 
+import Armes.Arme;
+import Armes.Baton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -21,7 +24,19 @@ public class Magicien extends Personnage {
         this.confirme = confirme;
     }
     
+    //Choix des armes preferees du magicien
     
-    
+    Arme arme;
+    int nbArme;
+    public int NBArmepref(){
+        for (int i=0; i<inventaire.size(); i++){
+            arme=inventaire.get(i);
+            if (arme instanceof Baton){
+                nbArme+=1;
+            }
+        }
+        System.out.println("Le nombre d'arme preferee est :"+ nbArme);
+        return nbArme;
+    }
     
 }
