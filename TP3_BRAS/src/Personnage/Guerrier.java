@@ -11,10 +11,12 @@ package Personnage;
  */
 public class Guerrier extends Personnage {
     private boolean cheval;
+    public static int nbGuerrier=0;
 
     public Guerrier(boolean cheval, String nom, int NiveauDeVie) {
         super(nom, NiveauDeVie);
         this.cheval = cheval;
+        nbGuerrier ++;
     }
 
     public void setCheval(boolean cheval) {
